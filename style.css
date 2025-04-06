@@ -6,30 +6,29 @@
 }
 
 body {
-    background: linear-gradient(to right, #e0f7fa, #80deea);
+    background: linear-gradient(135deg, #89f7fe, #66a6ff);
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    color: #333;
+    color: #fff;
     text-align: center;
 }
 
 .container {
-    background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(15px);
-    padding: 20px;
-    border-radius: 15px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 25px;
+    border-radius: 20px;
     width: 90%;
-    max-width: 450px;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
     animation: fadeIn 1s ease-in-out;
 }
 
 .search-box {
     display: flex;
     justify-content: center;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .search-box input {
@@ -43,29 +42,24 @@ body {
 
 .search-box button {
     padding: 10px 15px;
+    margin-left: 10px;
     border: none;
     border-radius: 20px;
-    background: #0288d1;
+    background: #007fff;
     color: white;
     cursor: pointer;
     transition: 0.3s;
 }
 
 .search-box button:hover {
-    background: #0277bd;
-}
-
-.weather-main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background: #005ecb;
 }
 
 #weather-icon {
     width: 80px;
     height: 80px;
-    margin-right: 10px;
-    transition: transform 0.3s;
+    object-fit: contain;
+    margin: 10px 0;
 }
 
 .weather-details {
@@ -75,39 +69,58 @@ body {
 }
 
 .details-box {
-    background: rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.2);
     padding: 10px;
     border-radius: 10px;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.forecast {
+    margin-top: 20px;
 }
 
 .forecast-container {
     display: flex;
-    overflow-x: auto; /* Enables horizontal scrolling if needed */
-    gap: 10px; /* Space between forecast cards */
+    overflow-x: auto;
+    gap: 15px;
     padding: 10px;
     justify-content: center;
 }
 
 .forecast-card {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.1);
     padding: 10px;
-    border-radius: 8px;
+    border-radius: 10px;
+    min-width: 110px;
+    color: #fff;
     text-align: center;
-    min-width: 120px; /* Ensures the forecast cards stay in a row */
 }
 
 .forecast-card img {
-    width: 50px; /* Adjust icon size */
+    width: 50px;
     height: auto;
 }
 
-
 .forecast-card:hover {
     transform: scale(1.05);
+    transition: 0.3s;
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#weather-icon {
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+    transition: transform 0.3s;
+    object-fit: contain;
 }
